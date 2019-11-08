@@ -2,14 +2,14 @@
 <export version="D">
   <design>
     <source>/Users/lustiga/Dropbox (HHMI)/Code/karpova_lab/pyControl/Hardware Modules/Audio_teensy/pcb/Audio_teensy/Audio_teensy.sch</source>
-    <date>Friday, November 01, 2019 at 10:42:05 AM</date>
+    <date>Friday, November 08, 2019 at 09:44:46 AM</date>
     <tool>Eeschema (5.1.4-0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
         <company/>
-        <rev>1.0</rev>
-        <date>2019-11-01</date>
+        <rev>1.1</rev>
+        <date>2019-11-07</date>
         <source>Audio_teensy.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -20,9 +20,12 @@
   </design>
   <components>
     <comp ref="J1">
-      <value>RJ45 Jack</value>
+      <value>0855025008</value>
       <footprint>asl_footprints:RJ45_SMD</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=WM3547CT-ND</datasheet>
+      <fields>
+        <field name="Description">RJ45 Jack</field>
+      </fields>
       <libsource lib="asl_symbols" part="RJ45_pyControl" description="RJ connector, 8P8C (8 positions 8 connected)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBB4566</tstamp>
@@ -31,6 +34,9 @@
       <value>AP7313</value>
       <footprint>Package_TO_SOT_SMD:TSOT-23</footprint>
       <datasheet>https://www.digikey.com/product-detail/en/diodes-incorporated/AP7313-18SAG-7/AP7313-18SAG-7DICT-ND/2270838</datasheet>
+      <fields>
+        <field name="Description">1.8V LDO Regulator</field>
+      </fields>
       <libsource lib="asl_symbols" part="AP7313" description="3.3v Linear Regulator"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBA0E92</tstamp>
@@ -38,23 +44,29 @@
     <comp ref="C5">
       <value>1.0µF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=1276-6524-1-ND</datasheet>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBA7323</tstamp>
     </comp>
     <comp ref="J4">
-      <value>Mono Audio Jack</value>
+      <value>MJ-3523-SMT</value>
       <footprint>asl_footprints:MonoJack</footprint>
       <datasheet>https://www.digikey.com/products/en?keywords=CP-3523MJCT-ND</datasheet>
+      <fields>
+        <field name="Description">Mono Audio Jack</field>
+      </fields>
       <libsource lib="asl_symbols" part="MonoJack" description="mono jack"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBB2449</tstamp>
     </comp>
     <comp ref="J5">
-      <value>Mono Audio Jack</value>
+      <value>MJ-3523-SMT</value>
       <footprint>asl_footprints:MonoJack</footprint>
       <datasheet>https://www.digikey.com/products/en?keywords=CP-3523MJCT-ND</datasheet>
+      <fields>
+        <field name="Description">Mono Audio Jack</field>
+      </fields>
       <libsource lib="asl_symbols" part="MonoJack" description="mono jack"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBB640C</tstamp>
@@ -62,7 +74,7 @@
     <comp ref="C4">
       <value>150nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/product-detail/en/kemet/C0603C154K8RACTU/399-7862-1-ND/3471585</datasheet>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBBA3E1</tstamp>
@@ -70,7 +82,7 @@
     <comp ref="C2">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=1276-1258-1-ND</datasheet>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBC91D4</tstamp>
@@ -78,7 +90,7 @@
     <comp ref="C3">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=1276-1258-1-ND</datasheet>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBCD504</tstamp>
@@ -86,21 +98,24 @@
     <comp ref="C1">
       <value>1.0µF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=1276-6524-1-ND</datasheet>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBCE93B</tstamp>
     </comp>
     <comp ref="FB1">
-      <value>Ferrite Bead</value>
+      <value>600Ω @ 100MHz</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>https://www.digikey.com/products/en?keywords=445-2166-1-ND</datasheet>
+      <fields>
+        <field name="Description">0603 Ferrite Bead</field>
+      </fields>
       <libsource lib="Device" part="Ferrite_Bead_Small" description="Ferrite bead, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBD566A</tstamp>
     </comp>
     <comp ref="DRA1">
-      <value>DIN_Rail_Adapter</value>
+      <value>DIN Rail Adapter</value>
       <footprint>asl_footprints:DIN_Clip</footprint>
       <datasheet>~</datasheet>
       <fields>
@@ -113,7 +128,7 @@
     <comp ref="R3">
       <value>2.2KΩ</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=A130093CT-ND</datasheet>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBBC182</tstamp>
@@ -121,7 +136,7 @@
     <comp ref="R2">
       <value>2.2KΩ</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=A130093CT-ND</datasheet>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBBDF2A</tstamp>
@@ -129,15 +144,15 @@
     <comp ref="R1">
       <value>100Ω</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=311-100HRCT-ND</datasheet>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBD3E4C</tstamp>
     </comp>
     <comp ref="C6">
-      <value>2.2.µF</value>
+      <value>2.2µF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=1276-1040-1-ND</datasheet>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBF5F5D</tstamp>
@@ -145,29 +160,35 @@
     <comp ref="C7">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.digikey.com/products/en?keywords=1276-1258-1-ND</datasheet>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBF64C7</tstamp>
     </comp>
     <comp ref="J3">
-      <value>Female Header</value>
+      <value>SSM-114-L-SV-BE</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical_SMD_Pin1Left</footprint>
       <datasheet>https://www.digikey.com/products/en?keywords=SSM-114-L-SV-BE-ND</datasheet>
+      <fields>
+        <field name="Description">14pin Female Header</field>
+      </fields>
       <libsource lib="Connector" part="Conn_01x14_Female" description="Generic connector, single row, 01x14, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DC27049</tstamp>
     </comp>
     <comp ref="J2">
-      <value>Female Header</value>
+      <value>SSM-114-L-SV-BE</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical_SMD_Pin1Left</footprint>
       <datasheet>https://www.digikey.com/products/en?keywords=SSM-114-L-SV-BE-ND</datasheet>
+      <fields>
+        <field name="Description">14pin Female Header</field>
+      </fields>
       <libsource lib="Connector" part="Conn_01x14_Female" description="Generic connector, single row, 01x14, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DC200BF</tstamp>
     </comp>
     <comp ref="U1">
-      <value>Teensy3.2_smd</value>
+      <value>Teensy 3.2</value>
       <footprint>asl_footprints:Teensy30_31_32_LC_SMD</footprint>
       <datasheet>https://www.pjrc.com/teensy/teensy31.html</datasheet>
       <fields>
@@ -181,6 +202,9 @@
       <value>SGTL5000</value>
       <footprint>Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm</footprint>
       <datasheet>https://www.digikey.com/products/en?keywords=SGTL5000XNAA3R2CT-ND</datasheet>
+      <fields>
+        <field name="Description">Codec IC</field>
+      </fields>
       <libsource lib="asl_symbols" part="SGTL5000" description="Audio ic"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DBB136F</tstamp>
@@ -270,9 +294,9 @@
         <field name="Footprint">Package_TO_SOT_SMD:TSOT-23</field>
       </fields>
       <pins>
-        <pin num="1" name="GND" type="input"/>
+        <pin num="1" name="Vin" type="input"/>
         <pin num="2" name="Vout" type="input"/>
-        <pin num="3" name="Vin" type="input"/>
+        <pin num="3" name="GND" type="input"/>
       </pins>
     </libpart>
     <libpart lib="asl_symbols" part="DIN_Rail_Adapter">
@@ -442,7 +466,7 @@
       <node ref="U3" pin="31"/>
       <node ref="U3" pin="3"/>
       <node ref="U3" pin="1"/>
-      <node ref="U2" pin="1"/>
+      <node ref="U2" pin="3"/>
       <node ref="U1" pin="1"/>
       <node ref="C7" pin="1"/>
       <node ref="C6" pin="1"/>
@@ -488,8 +512,8 @@
       <node ref="U3" pin="23"/>
     </net>
     <net code="17" name="Net-(U1-Pad29)">
-      <node ref="U3" pin="26"/>
       <node ref="U1" pin="29"/>
+      <node ref="U3" pin="26"/>
     </net>
     <net code="18" name="Net-(U1-Pad20)">
       <node ref="U1" pin="20"/>
@@ -505,9 +529,9 @@
       <node ref="C1" pin="2"/>
       <node ref="FB1" pin="2"/>
       <node ref="R3" pin="1"/>
-      <node ref="U2" pin="3"/>
       <node ref="U3" pin="20"/>
       <node ref="R2" pin="1"/>
+      <node ref="U2" pin="1"/>
       <node ref="U1" pin="31"/>
     </net>
     <net code="21" name="Net-(R1-Pad1)">
