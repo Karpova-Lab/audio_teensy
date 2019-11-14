@@ -21,6 +21,7 @@ AudioControlSGTL5000     codec;          //xy=607.0056762695312,492.005678176879
 
 
 int current_waveform=0;
+const int LED = 13;
 
 void setup() {
   // put your setup code here, to run once:
@@ -28,8 +29,8 @@ void setup() {
   codec.enable();
   codec.volume(0.10);
 
-  modulation.frequency(20/3);
-  modulation.amplitude(.01);
+  modulation.frequency(20/3.0);
+  modulation.amplitude(.019);
 
   left_tone.frequency(6500);
   left_tone.amplitude(1.0);
@@ -43,6 +44,8 @@ void setup() {
   left_tone.begin(current_waveform);
   right_tone.begin(current_waveform);
   Serial1.begin(9600);
+  pinMode(LED,OUTPUT);
+  digitalWrite(LED,LOW);
  }
 
 void loop() {
@@ -56,14 +59,17 @@ void serialUI(){
       if (msg=='L'){ // left tone
         mixer.gain(0,1);
         mixer.gain(1,0);
+        digitalWrite(LED,HIGH);
       }
       else if (msg=='R'){ //right tone
         mixer.gain(0,0);
         mixer.gain(1,1);
+        digitalWrite(LED,HIGH);
       }
       else if (msg=='S'){ 
         mixer.gain(0,0);
         mixer.gain(1,0);
+        digitalWrite(LED,LOW);
       }
       else if (msg=='V'){ 
         float volume = parseData();
