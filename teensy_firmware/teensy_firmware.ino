@@ -19,7 +19,6 @@ AudioConnection          patchCord6(mixer, 0, i2s, 1);
 AudioControlSGTL5000     codec;          //xy=607.0056762695312,492.0056781768799
 // GUItool: end automatically generated code
 
-
 int current_waveform=0;
 const int LED = 13;
 
@@ -49,10 +48,6 @@ void setup() {
  }
 
 void loop() {
-  serialUI();
-}
-
-void serialUI(){
   if (Serial1.available()){
     char msg = Serial1.read();
     if (msg=='L' | msg == 'R' | msg == 'S' | msg == 'V'){
@@ -73,13 +68,6 @@ void serialUI(){
       }
       else if (msg=='V'){ 
         float volume = parseData();
-        // //don't go above 65 or below 0
-        // if (volume>65) {
-        //   volume = 65;
-        // }
-        // else if (volume<0) {
-        //   volume = 0;
-        // }
         volume = 2*volume/100.0;
         codec.volume(volume);
       }
@@ -94,4 +82,3 @@ int parseData(){
   msgPointer = strtok(msgData,",");
   return atoi(msgPointer);
 }
-
