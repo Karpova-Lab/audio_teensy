@@ -1,3 +1,5 @@
+# Teensy Audio Board for pyControl
+![](docs/photo.jpg)
 Design based on [Teensy Audio Adaptor Board](https://www.pjrc.com/store/teensy3_audio.html)
 
 ## Bill Of Materials
@@ -16,24 +18,14 @@ Design based on [Teensy Audio Adaptor Board](https://www.pjrc.com/store/teensy3_
 | 1   | U2         | 1.8V LDO Regulator  | [AP7313](https://www.digikey.com/product-detail/en/diodes-incorporated/AP7313-18SAG-7/AP7313-18SAG-7DICT-ND/2270838) | 
 | 1   | U3         | Codec IC            | [SGTL5000](https://www.digikey.com/products/en?keywords=SGTL5000XNAA3R2CT-ND)                                        | 
 
-<div style="text-align:center; margin-bottom:24px">
-  <a href="https://karpova-lab.github.io/audio_teensy/ibom.html" style="background-color: #2980b9;
-  border: none;
-  color: white;
-  padding: 15px 15px;
-  text-align:center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  border-radius:15px">View interactive BOM</a>
-</div>
+### [View interactive BOM](https://karpova-lab.github.io/audio_teensy/ibom)
 
-![](pics/render.png)
+![](docs/render.png)
 
 ## Firmware
 [Audio System Design Tool](https://www.pjrc.com/teensy/gui/index.html)
 
-![](pics/design_tool.png)
+![](docs/design_tool.png) 
 
 ```c++
 #include <Audio.h>
@@ -125,5 +117,5 @@ int parseData(){
 ## Latency
 The start and stop latencies are both about 6.5 ± 1 ms
 
-![](pics/start_latency.png)
-![](pics/stop_latency.png)
+![](docs/start_latency.png)
+![](docs/stop_latency.png)
