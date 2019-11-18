@@ -1,6 +1,6 @@
 # Teensy Audio Board for pyControl
 ![](docs/photo.jpg)
-Design based on [Teensy Audio Adaptor Board](https://www.pjrc.com/store/teensy3_audio.html)
+This device connects with a [pyControl breakout](https://karpova-lab.github.io/pyControl-D-Series-Breakout/index.html) to play audio tones. A [Teensy 3.2](https://www.pjrc.com/teensy/index.html) generates an i2s audio signal which is later decompressed and amplified by the SGTL5000 codec IC. A left and right amplified signal is output to two separate mono headphone jacks. The design of this pcb is based on the [Teensy Audio Adaptor Board](https://www.pjrc.com/store/teensy3_audio.html).
 
 ## Bill Of Materials
 | Qty | Reference  | Description         | Value/MPN                                                                                                            | 
@@ -22,7 +22,9 @@ Design based on [Teensy Audio Adaptor Board](https://www.pjrc.com/store/teensy3_
 
 ![](docs/render.png)
 
-## Firmware
+## Example Firmware
+This following firmware creates 6.5KHz and 14KHz sine waves that are frequency modulated at 6.66 Hz. 
+
 [Audio System Design Tool](https://www.pjrc.com/teensy/gui/index.html)
 
 ![](docs/design_tool.png) 
@@ -114,8 +116,35 @@ int parseData(){
 }
 ```
 
+## pyControl Device file
+
+``` python
+from machine import UART
+from array import array
+
+class Teensy_audio():
+    def __init__(self, port):
+        assert port.UART is not None, '! Teensy Audio Player needs a port with UART.'
+        self.uart = UART(port.UART, 9600)
+        self.uart.init(9600, bits=8, parity=None, stop=1, timeout=1)
+        self.uart.write('S')
+
+    def play(self, side):
+        if side == 'Left':
+            self.uart.write('L')
+        elif side == 'Right':
+            self.uart.write('R')
+        return True
+
+    def stop(self):
+        self.uart.write('S')
+        return False
+
+    def set_volume(self, volume): # Between 1 - 65
+        self.uart.write('V,{}'.format(volume))
+```
+
 ## Latency
 The start and stop latencies are both about 6.5 ± 1 ms
 
-![](docs/start_latency.png)
-![](docs/stop_latency.png)
+![](docs/latencies.png)
