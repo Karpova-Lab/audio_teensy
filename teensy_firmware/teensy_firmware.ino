@@ -5,19 +5,23 @@
 #include <SerialFlash.h>
 
 // GUItool: begin automatically generated code
-AudioSynthWaveformSine   modulation;     //xy=323.0056381225586,328.0056438446045
-AudioSynthWaveformModulated left_tone;   //xy=530.0056648254395,308.0056457519531
-AudioSynthWaveformModulated right_tone;   //xy=533.1874694824219,363.0965919494629
-AudioMixer4              mixer;         //xy=719.1874771118164,330.0965805053711
-AudioOutputI2S           i2s;            //xy=868.0056648254395,332.0056505203247
+AudioSynthWaveformSine   modulation;     //xy=405,328
+AudioSynthSimpleDrum     bloop_tone;          //xy=585,409
+AudioSynthWaveformModulated left_tone;      //xy=590,314
+AudioSynthWaveformModulated right_tone;     //xy=592,355
+AudioMixer4              mixer;          //xy=791,371
+AudioOutputI2S           i2s;            //xy=940,373
 AudioConnection          patchCord1(modulation, 0, left_tone, 0);
 AudioConnection          patchCord2(modulation, 0, right_tone, 0);
-AudioConnection          patchCord3(left_tone, 0, mixer, 0);
-AudioConnection          patchCord4(right_tone, 0, mixer, 1);
-AudioConnection          patchCord5(mixer, 0, i2s, 0);
-AudioConnection          patchCord6(mixer, 0, i2s, 1);
-AudioControlSGTL5000     codec;          //xy=607.0056762695312,492.0056781768799
+AudioConnection          patchCord3(bloop_tone, 0, mixer, 2);
+AudioConnection          patchCord4(left_tone, 0, mixer, 0);
+AudioConnection          patchCord5(right_tone, 0, mixer, 1);
+AudioConnection          patchCord6(mixer, 0, i2s, 0);
+AudioConnection          patchCord7(mixer, 0, i2s, 1);
+AudioControlSGTL5000     codec;          //xy=707,513
 // GUItool: end automatically generated code
+
+
 
 int current_waveform=0;
 const int LED = 13;
@@ -36,8 +40,15 @@ void setup() {
   right_tone.frequency(14000);
   right_tone.amplitude(1.0);
 
+  
+  bloop_tone.frequency(2000);
+  bloop_tone.length(100);
+  bloop_tone.secondMix(0.0);
+  bloop_tone.pitchMod(0.3);
+
   mixer.gain(0,0);
   mixer.gain(1,0);
+  mixer.gain(2,0);
 
   current_waveform = WAVEFORM_SINE;
   left_tone.begin(current_waveform);
@@ -50,20 +61,32 @@ void setup() {
 void loop() {
   if (Serial1.available()){
     char msg = Serial1.read();
-    if (msg=='L' | msg == 'R' | msg == 'S' | msg == 'V'){
+    if (msg=='L' | msg == 'R' | msg == 'S' | msg == 'V' | msg == 'B'){
       if (msg=='L'){ // left tone
         mixer.gain(0,1);
         mixer.gain(1,0);
+        mixer.gain(2,0);
         digitalWrite(LED,HIGH);
       }
       else if (msg=='R'){ //right tone
         mixer.gain(0,0);
         mixer.gain(1,1);
+        mixer.gain(2,0);
         digitalWrite(LED,HIGH);
       }
       else if (msg=='S'){ 
         mixer.gain(0,0);
         mixer.gain(1,0);
+        mixer.gain(2,0);
+        digitalWrite(LED,LOW);
+      }
+      else if (msg=='B'){ 
+        mixer.gain(0,0);
+        mixer.gain(1,0);
+        mixer.gain(2,1);
+        bloop_tone.noteOn();
+        digitalWrite(LED,HIGH);
+        delay(50);
         digitalWrite(LED,LOW);
       }
       else if (msg=='V'){ 
