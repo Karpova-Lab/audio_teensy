@@ -13,3 +13,5 @@ _autosave-*
 # Footprint cache
 fp-info-cache
 readme.txt
+pcb/Audio_teensy/Audio_teensy.kicad_prl
+pcb/Audio_teensy/Audio_teensy-backups

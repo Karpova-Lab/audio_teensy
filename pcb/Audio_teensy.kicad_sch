@@ -5,8 +5,8 @@
   (paper "A4")
 
   (title_block
-    (date "2019-11-08")
-    (rev "1.1")
+    (date "2021-09-01")
+    (rev "1.2")
   )
 
   (lib_symbols
@@ -1637,13 +1637,13 @@
     (property "Reference" "J4" (id 0) (at 207.772 119.9388 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "MJ-3523-SMT" (id 1) (at 207.772 122.2502 90)
+    (property "Value" "4832.2230" (id 1) (at 207.772 122.2502 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "asl_footprints:MonoJack" (id 2) (at 208.28 121.92 0)
+    (property "Footprint" "asl_footprints:mono_jack_throughhole" (id 2) (at 208.28 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://www.digikey.com/products/en?keywords=CP-3523MJCT-ND" (id 3) (at 204.47 121.92 0)
+    (property "Datasheet" "https://www.digikey.com/en/products/detail/4832.2230/486-3417-ND/1731054?itemSeq=375577354" (id 3) (at 204.47 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Description" "Mono Audio Jack" (id 4) (at 204.47 121.92 0)
@@ -1659,13 +1659,13 @@
     (property "Reference" "J5" (id 0) (at 230.632 119.9388 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "MJ-3523-SMT" (id 1) (at 230.632 122.2502 90)
+    (property "Value" "4832.2230" (id 1) (at 230.632 122.2502 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "asl_footprints:MonoJack" (id 2) (at 231.14 121.92 0)
+    (property "Footprint" "asl_footprints:mono_jack_throughhole" (id 2) (at 231.14 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://www.digikey.com/products/en?keywords=CP-3523MJCT-ND" (id 3) (at 227.33 121.92 0)
+    (property "Datasheet" "https://www.digikey.com/en/products/detail/4832.2230/486-3417-ND/1731054?itemSeq=375577354" (id 3) (at 227.33 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Description" "Mono Audio Jack" (id 4) (at 227.33 121.92 0)
@@ -1785,7 +1785,7 @@
     (property "Value" "0855025008" (id 1) (at 45.72 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "asl_footprints:RJ45_SMD" (id 2) (at 54.61 74.93 0)
+    (property "Footprint" "asl_footprints:RJ45_THP_Vertical" (id 2) (at 54.61 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.digikey.com/products/en?keywords=WM3547CT-ND" (id 3) (at 50.8 88.265 90)
@@ -1926,7 +1926,7 @@
       (reference "FB1") (unit 1) (value "600Ω @ 100MHz") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-00005dbb4566"
-      (reference "J1") (unit 1) (value "0855025008") (footprint "asl_footprints:RJ45_SMD")
+      (reference "J1") (unit 1) (value "0855025008") (footprint "asl_footprints:RJ45_THP_Vertical")
     )
     (path "/00000000-0000-0000-0000-00005dc200bf"
       (reference "J2") (unit 1) (value "SSM-114-L-SV-BE") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical_SMD_Pin1Left")
@@ -1935,10 +1935,10 @@
       (reference "J3") (unit 1) (value "SSM-114-L-SV-BE") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical_SMD_Pin1Left")
     )
     (path "/00000000-0000-0000-0000-00005dbb2449"
-      (reference "J4") (unit 1) (value "MJ-3523-SMT") (footprint "asl_footprints:MonoJack")
+      (reference "J4") (unit 1) (value "4832.2230") (footprint "asl_footprints:mono_jack_throughhole")
     )
     (path "/00000000-0000-0000-0000-00005dbb640c"
-      (reference "J5") (unit 1) (value "MJ-3523-SMT") (footprint "asl_footprints:MonoJack")
+      (reference "J5") (unit 1) (value "4832.2230") (footprint "asl_footprints:mono_jack_throughhole")
     )
     (path "/00000000-0000-0000-0000-00005dbd3e4c"
       (reference "R1") (unit 1) (value "100Ω") (footprint "Resistor_SMD:R_0603_1608Metric")
