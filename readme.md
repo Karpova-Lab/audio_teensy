@@ -15,9 +15,9 @@ A left and right amplified signal is output to two separate mono headphone jacks
 | 2   | C5, C1     | 0603 Capacitor      | [1.0µF](https://www.digikey.com/products/en?keywords=1276-6524-1-ND)                                                 | 
 | 1   | C6         | 0603 Capacitor      | [2.2µF](https://www.digikey.com/products/en?keywords=1276-1040-1-ND)                                                 | 
 | 1   | FB1        | 0603 Ferrite Bead   | [600Ω @ 100MHz](https://www.digikey.com/products/en?keywords=445-2166-1-ND)                                          | 
-| 1   | J1         | RJ45 Jack           | [0855025008](https://www.digikey.com/products/en?keywords=WM3547CT-ND)                                               | 
+| 1   | J1         | RJ45 Jack           | [54602-908LF](https://www.digikey.com/en/products/detail/54602-908LF/609-1046-ND/1001360)                            | 
 | 2   | J3, J2     | 14pin Female Header | [SSM-114-L-SV-BE](https://www.digikey.com/products/en?keywords=SSM-114-L-SV-BE-ND)                                   | 
-| 2   | J4, J5     | Mono Audio Jack     | [MJ-3523-SMT](https://www.digikey.com/products/en?keywords=CP-3523MJCT-ND)                                           | 
+| 2   | J4, J5     | Mono Audio Jack     | [4832.2230](https://www.digikey.com/en/products/detail/schurter-inc/4832-2230/1731054?s=N4IgTCBcDaICwA4BsBaAzHAjAdhAXQF8g)| 
 | 1   | R1         | 0603 Resistor       | [100Ω](https://www.digikey.com/products/en?keywords=311-100HRCT-ND)                                                  | 
 | 2   | R3, R2     | 0603 Resistor       | [2.2KΩ](https://www.digikey.com/products/en?keywords=A130093CT-ND)                                                   | 
 | 1   | U2         | 1.8V LDO Regulator  | [AP7313](https://www.digikey.com/product-detail/en/diodes-incorporated/AP7313-18SAG-7/AP7313-18SAG-7DICT-ND/2270838) | 
